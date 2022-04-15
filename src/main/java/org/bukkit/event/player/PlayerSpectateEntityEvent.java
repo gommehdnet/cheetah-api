@@ -6,6 +6,7 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
 /**
+ * This event is similar to papers PlayerStartSpectatingEntityEvent and PlayerStopSpectatingEntityEvent
  * @author David (_Esel)
  */
 public class PlayerSpectateEntityEvent extends PlayerEvent implements Cancellable {
@@ -19,6 +20,10 @@ public class PlayerSpectateEntityEvent extends PlayerEvent implements Cancellabl
         this.entity = entity;
     }
 
+    /**
+     * @return the entity that the player will spectate
+     * or null if the player stops spectating
+     */
     public Entity getEntity() {
         return this.entity;
     }

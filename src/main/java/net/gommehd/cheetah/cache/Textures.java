@@ -1,6 +1,8 @@
 package net.gommehd.cheetah.cache;
 
 /**
+ * Represent a minecraft texture.
+ * Similar as the Property from authlib just for textures
  * @author David (_Esel)
  */
 public class Textures {

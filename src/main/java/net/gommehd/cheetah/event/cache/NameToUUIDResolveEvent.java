@@ -5,6 +5,11 @@ import org.bukkit.event.HandlerList;
 
 import java.util.UUID;
 
+/**
+ * Called when the minecraft server tries to resolve the profile of a player by name
+ * Keep in mind that the implementation caches the profiles.
+ * @author David (_Esel)
+ */
 public class NameToUUIDResolveEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
 
@@ -20,6 +25,10 @@ public class NameToUUIDResolveEvent extends Event {
         return name;
     }
 
+    /**
+     * @return null by default or the player uuid if a previous listener set it
+     * via {@link NameToUUIDResolveEvent#setUuid(UUID)}
+     */
     public UUID getUuid() {
         return uuid;
     }
